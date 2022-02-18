@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Piano.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 202b0000b9f3e95418ef8ec7e0637af5
+  - enabled: 1
+    path: Assets/Scenes/DrumKit.unity
+    guid: 3d4474188aa61474097a2d99a64d2bb3
+  - enabled: 1
+    path: Assets/Scenes/Grid.unity
+    guid: ed5732e7eb03246889a3f94133c7b294
   m_configObjects: {}
