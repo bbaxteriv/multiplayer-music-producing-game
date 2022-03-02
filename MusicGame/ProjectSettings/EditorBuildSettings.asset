@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Grid.unity
     guid: ed5732e7eb03246889a3f94133c7b294
+  - enabled: 1
+    path: Assets/Scenes/Harp.unity
+    guid: c98f728d997814686bdc1b00cf7ea88d
   m_configObjects: {}

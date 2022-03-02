@@ -308,6 +308,7 @@ MonoBehaviour:
   DrumKitButton: {fileID: 1879103404}
   PianoButton: {fileID: 1712728715}
   GridButton: {fileID: 2064802756}
+  HarpButton: {fileID: 1171207516}
 --- !u!1 &1171207514
 GameObject:
   m_ObjectHideFlags: 0
