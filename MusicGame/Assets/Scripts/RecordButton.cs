@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RecordButton : MonoBehaviour
 {
@@ -37,9 +38,9 @@ public class RecordButton : MonoBehaviour
         }
         else // end recording
         {
+            RecButton.GetComponent<Image>().color = new Color(1, 0, 0);
             EndRecording();
             SaveToTrack();
-            RecButton.GetComponent<Image>().color = new Color(1, 0, 0);
         }
     }
 
@@ -49,11 +50,24 @@ public class RecordButton : MonoBehaviour
         Renderer.Rendering = false;
     }
 
-    // locate saved file, create new object in tracks scene, set that file as its audio source
+    // figure out how to create newTrack in the Tracks scene
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
-        newTrack.transform.position = new Vector3(-3, clickNumber, 1);
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
+        StartCoroutine(LoadTracks(newTrack));
+    }
+
+    IEnumerator LoadTracks(GameObject newTrack)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Tracks", LoadSceneMode.Additive);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        SceneManager.MoveGameObjectToScene(newTrack, SceneManager.GetSceneByName("Tracks"));
+        SceneManager.UnloadSceneAsync(currentScene);
     }
 }
