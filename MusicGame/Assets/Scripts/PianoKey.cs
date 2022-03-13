@@ -32,13 +32,18 @@ public class PianoKey : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().color = OriginalColor;
             }
+			
         }
+		
     }
 
     void OnMouseDown() // mouse click
     {
-        PlayNote();
-        ChangeColor();
+		if (Input.GetMouseButton(0))
+        {
+            PlayNote();
+        	ChangeColor();
+        }
     }
 
     void OnMouseUp()
@@ -51,6 +56,7 @@ public class PianoKey : MonoBehaviour
         GetComponent<AudioSource>().pitch = Mathf.Pow(2f, SemitoneOffset/12.0f);
         GetComponent<AudioSource>().Play();
     }
+	
 
     void ChangeColor()
     {
@@ -63,4 +69,6 @@ public class PianoKey : MonoBehaviour
             GetComponent<SpriteRenderer>().color = new Color(60f/255f, 60f/255f, 60f/255f);
         }
     }
+	
+
 }
