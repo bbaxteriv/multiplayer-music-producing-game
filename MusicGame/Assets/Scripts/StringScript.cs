@@ -56,7 +56,7 @@ public class StringScript : MonoBehaviour
     {
         if (OriginalColor == Color.white) // white key
         {
-            GetComponent<SpriteRenderer>().color = new Color(230f / 255f, 230f / 255f, 230f / 255f);
+            GetComponent<SpriteRenderer>().color = new Color(210f/255f, 210f/255f, 210f/255f);
         }
         else // black key
         {

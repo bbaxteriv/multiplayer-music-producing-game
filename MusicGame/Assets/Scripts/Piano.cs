@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PianoKey : MonoBehaviour
+public class Piano : MonoBehaviour
 {
     public float SemitoneOffset = 0;
     private Color OriginalColor;
@@ -23,8 +23,8 @@ public class PianoKey : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
                 if (hit) // touchscreen
                 {
-                    hit.collider.gameObject.GetComponent<PianoKey>().PlayNote();
-                    hit.collider.gameObject.GetComponent<PianoKey>().ChangeColor();
+                    hit.collider.gameObject.GetComponent<Piano>().PlayNote();
+                    hit.collider.gameObject.GetComponent<Piano>().ChangeColor();
                 }
             }
 

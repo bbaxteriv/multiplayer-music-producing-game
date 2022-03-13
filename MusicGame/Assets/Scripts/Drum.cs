@@ -23,13 +23,13 @@ public class Drum : MonoBehaviour
                 if (hit) // touchscreen
                 {
                     hit.collider.gameObject.GetComponent<Drum>().PlayNote();
-                    //hit.collider.gameObject.GetComponent<PianoKey>().ChangeColor();
+                    hit.collider.gameObject.GetComponent<Drum>().ChangeColor();
                 }
             }
 
             if (touch.phase == TouchPhase.Ended)
             {
-                //GetComponent<SpriteRenderer>().color = OriginalColor;
+                RestoreColor();
             }
         }
     }
@@ -37,12 +37,12 @@ public class Drum : MonoBehaviour
     void OnMouseDown() // mouse click
     {
         PlayNote();
-        //ChangeColor();
+        ChangeColor();
     }
 
     void OnMouseUp()
     {
-        //GetComponent<SpriteRenderer>().color = OriginalColor;
+        RestoreColor();
     }
 
     void PlayNote()
@@ -52,13 +52,11 @@ public class Drum : MonoBehaviour
 
     void ChangeColor()
     {
-        if (OriginalColor == Color.white) // white key
-        {
-            GetComponent<SpriteRenderer>().color = new Color(230f/255f, 230f/255f, 230f/255f);
-        }
-        else // black key
-        {
-            GetComponent<SpriteRenderer>().color = new Color(60f/255f, 60f/255f, 60f/255f);
-        }
+        GetComponent<SpriteRenderer>().color = new Color(210f/255f, 210f/255f, 210f/255f);
+    }
+
+    void RestoreColor()
+    {
+        GetComponent<SpriteRenderer>().color = OriginalColor;
     }
 }
