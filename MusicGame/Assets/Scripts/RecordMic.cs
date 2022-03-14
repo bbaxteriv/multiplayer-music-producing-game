@@ -44,7 +44,7 @@ public class RecordMic : MonoBehaviour
     {
 		Microphone.End(DeviceName);
 		audioSource.clip = Microphone.Start(DeviceName, true, 3000, 44100);
-		audioSource.loop = true; // Mute the sound with an Audio Mixer group becuase we don't want the player to hear it
+		
 		Debug.Log(Microphone.IsRecording(DeviceName).ToString());
 
 		if (Microphone.IsRecording (DeviceName)) { //check that the mic is recording, otherwise you'll get stuck in an infinite loop waiting for it to start
