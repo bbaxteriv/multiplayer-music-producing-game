@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class AudioVisualizer : MonoBehaviour
 {
-	public Transform[] audioSpectrumObjects;
-	public float heightMultiplier;
+	public Transform[] TransformingObjects;
 	public int numberOfSamples = 1024; //step by 2
 	public FFTWindow fftWindow;
 	public float lerpTime = 1;
-
+	public float heightMultiplier;
+	
 	/*
 	 * The intensity of the frequencies found between 0 and 44100 will be
 	 * grouped into 1024 elements. So each element will contain a range of about 43.06 Hz.
@@ -21,27 +21,20 @@ public class AudioVisualizer : MonoBehaviour
 	void Update() {
 
 		// initialize our float array
-		float[] spectrum = new float[numberOfSamples];
-
-		// populate array with fequency spectrum data
+		float[] spectrum = new float [numberOfSamples];
+		
 		GetComponent<AudioSource>().GetSpectrumData(spectrum, 0, fftWindow);
-
 
 		// loop over audioSpectrumObjects and modify according to fequency spectrum data
 		// this loop matches the Array element to an object on a One-to-One basis.
-		for(int i = 0; i < audioSpectrumObjects.Length; i++)
+		for(int i = 0; i < TransformingObjects.Length; i++)
 		{
-
-			// apply height multiplier to intensity
 			float intensity = spectrum[i] * heightMultiplier;
-
-			// calculate object's scale
-			float lerpY = Mathf.Lerp(audioSpectrumObjects[i].localScale.y,intensity,lerpTime);
-			Vector3 newScale = new Vector3( audioSpectrumObjects[i].localScale.x, lerpY, audioSpectrumObjects[i].localScale.z);
-
-			// appply new scale to object
-			audioSpectrumObjects[i].localScale = newScale;
-
+			
+			float lerpY = Mathf.Lerp(TransformingObjects[i].localScale.y, intensity, lerpTime);
+			Vector3 newScale = new Vector3(TransformingObjects[i].localScale.x, lerpY, TransformingObjects[i].localScale.z);
+			
+			TransformingObjects[i].localScale = newScale;
 		}
 	}
 }

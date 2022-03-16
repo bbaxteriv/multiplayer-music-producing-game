@@ -23,6 +23,10 @@ public class Guitar : MonoBehaviour
 
     public void PlayChord()
     {
+        if (Dropdown.value == 0)
+        {
+            return;
+        }
         AudioSource Chord = Chords[Dropdown.value - 1];
         Chord.Play();
     }
