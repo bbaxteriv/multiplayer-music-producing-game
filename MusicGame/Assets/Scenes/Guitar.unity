@@ -263,11 +263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.626
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.612
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -309,10 +309,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &145048358
@@ -328,11 +324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.102
+      value: 5.07
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.352
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -374,10 +370,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &154516534
@@ -393,11 +385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.607
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.281
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -439,10 +431,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &170096643
@@ -738,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.651
+      value: 3.58
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -784,10 +772,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &293153370
@@ -803,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.668
+      value: 3.58
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -849,10 +833,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 28
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &304262955
@@ -868,11 +848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.075
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -914,10 +894,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &353626200
@@ -955,9 +931,9 @@ RectTransform:
   m_Father: {fileID: 455550432}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 225}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -50}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353626202
@@ -1286,7 +1262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.59
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1332,10 +1308,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 26
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &595661185
@@ -1478,11 +1450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.074
+      value: 4.01
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.479
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1524,10 +1496,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &631381023
@@ -1543,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.706
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1589,10 +1557,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 24
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &653668290
@@ -1608,11 +1572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.109
+      value: 4.04
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.155
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1654,10 +1618,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 22
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &738595691
@@ -1696,9 +1656,9 @@ RectTransform:
   m_Father: {fileID: 455550432}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -390, y: 225}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -50}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738595693
@@ -1896,11 +1856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.706
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1942,10 +1902,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &977976247
@@ -1961,7 +1917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.12
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2007,10 +1963,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &983788305
@@ -2030,11 +1982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.084
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.452
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2076,10 +2028,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1079809572
@@ -2095,7 +2043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.585
+      value: 4.53
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2141,10 +2089,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1139953110
@@ -2182,9 +2126,9 @@ RectTransform:
   m_Father: {fileID: 455550432}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -415, y: -225}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 75, y: 50}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1139953112
@@ -2295,7 +2239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.086
+      value: 4.02
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2341,10 +2285,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1239344322
@@ -2360,11 +2300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.563
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.576
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2406,10 +2346,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1257872381
@@ -2631,11 +2567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.556
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2677,10 +2613,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1288581568
@@ -2696,11 +2628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.723
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2742,10 +2674,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1303067244
@@ -3015,11 +2943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.098
+      value: 4.02
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.309
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3061,10 +2989,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1384429147
@@ -3155,11 +3079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.587
+      value: 3.56
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.483
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3201,10 +3125,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1467310794
@@ -3347,7 +3267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.601
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3393,10 +3313,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1632279639
@@ -3412,11 +3328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.595
+      value: 4.53
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.166
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3458,10 +3374,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 21
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1675873571
@@ -3477,7 +3389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.156
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3523,10 +3435,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1726598145
@@ -3621,11 +3529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.09
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.557
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3667,10 +3575,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1753234855
@@ -3776,11 +3680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.11
+      value: 5.07
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3822,10 +3726,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1791493936
@@ -4098,7 +3998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809144351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0479, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4138,11 +4038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.634
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.378
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4184,10 +4084,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1894936433
@@ -4203,7 +4099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.609
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4249,10 +4145,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1902291602
@@ -4466,11 +4358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.122
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.281
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4512,10 +4404,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1001 &1996420943
@@ -4531,11 +4419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.667
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.299
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 3864097098695126281, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4577,10 +4465,6 @@ PrefabInstance:
       propertyPath: SemitoneOffset
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7210481675025331201, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c579a553e01bd184eb62a6a9af37d668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b93e2fe3bdbb0458489cd76c33246e, type: 3}
 --- !u!1 &1997625744
