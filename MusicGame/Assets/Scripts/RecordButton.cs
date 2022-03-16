@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RecordButton : MonoBehaviour
 {
     private AudioRenderer Renderer;
-    private int ClickNumber;
+    private int clickNumber;
     public Button RecButton;
+    public GameObject TrackPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,7 @@ public class RecordButton : MonoBehaviour
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
-        ClickNumber = 0;
+        clickNumber = 0;
     }
 
     // Update is called once per frame
@@ -27,23 +29,45 @@ public class RecordButton : MonoBehaviour
     // Starts recording first time button is clicked, ends it second time
     public void Record()
     {
-        ClickNumber++;
+        clickNumber++;
 
-        if (ClickNumber % 2 == 1) // start recording
+        if (clickNumber % 2 == 1) // start recording
         {
             Renderer.Rendering = true;
             RecButton.GetComponent<Image>().color = new Color(166f/255f, 0, 0);
         }
         else // end recording
         {
-            EndRecording();
             RecButton.GetComponent<Image>().color = new Color(1, 0, 0);
+            EndRecording();
+            SaveToTrack();
         }
     }
 
     public void EndRecording()
     {
-        Renderer.Save("./Assets/Recordings/recording_" + ClickNumber / 2 + ".wav");
+        Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
         Renderer.Rendering = false;
+    }
+
+    // figure out how to create newTrack in the Tracks scene
+    public void SaveToTrack()
+    {
+        GameObject newTrack = Instantiate(TrackPrefab);
+        newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
+        StartCoroutine(LoadTracks(newTrack));
+    }
+
+    IEnumerator LoadTracks(GameObject newTrack)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Tracks", LoadSceneMode.Additive);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        SceneManager.MoveGameObjectToScene(newTrack, SceneManager.GetSceneByName("Tracks"));
+        SceneManager.UnloadSceneAsync(currentScene);
     }
 }
