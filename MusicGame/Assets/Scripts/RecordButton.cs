@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class RecordButton : MonoBehaviour
 {
@@ -54,6 +55,16 @@ public class RecordButton : MonoBehaviour
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
+        
+        if (File.Exists("Recordings/recording_" + clickNumber / 2))
+        {
+            Debug.LogWarning("file exists");
+        }
+        else
+        {
+            Debug.LogWarning("file does not exist");
+        }
+
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
         StartCoroutine(LoadTracks(newTrack));
     }
