@@ -21,6 +21,9 @@
 
 # Recordings Folder
 /[Aa]ssets/Resources/Recordings*
+/[Aa]ssets/Resources/Recordings
+/[Aa]ssets/Resources/Recordings/
+/[Aa]ssets/Resources/Recordings/*
 
 # Visual Studio cache directory
 .vs/
