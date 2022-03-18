@@ -54,19 +54,17 @@ public class RecordButton : MonoBehaviour
     // figure out how to create newTrack in the Tracks scene
     public void SaveToTrack()
     {
+        StartCoroutine(SaveFile());
         GameObject newTrack = Instantiate(TrackPrefab);
-        
-        if (File.Exists("Recordings/recording_" + clickNumber / 2))
-        {
-            Debug.LogWarning("file exists");
-        }
-        else
-        {
-            Debug.LogWarning("file does not exist");
-        }
-
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
         StartCoroutine(LoadTracks(newTrack));
+    }
+
+    IEnumerator SaveFile()
+    {
+        // while (!File.Exists("Recordings/recording_" + clickNumber / 2))
+        yield return new WaitForSeconds(3);
+        Debug.Log("waiting for 3 seconds");
     }
 
     IEnumerator LoadTracks(GameObject newTrack)
