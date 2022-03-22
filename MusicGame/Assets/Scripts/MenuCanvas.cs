@@ -11,7 +11,8 @@ public class MenuCanvas : MonoBehaviour
     public Button GridButton;
     public Button HarpButton;
     public Button GuitarButton;
-	public Button MicButton;
+	  public Button MicButton;
+    public Button TracksButton;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,10 @@ public class MenuCanvas : MonoBehaviour
         GridButton.onClick.AddListener(() => GridCallBack());
         HarpButton.onClick.AddListener(() => HarpCallBack());
         GuitarButton.onClick.AddListener(() => GuitarCallBack());
-		MicButton.onClick.AddListener(() => MicCallBack());
+		    MicButton.onClick.AddListener(() => MicCallBack());
+        TracksButton.onClick.AddListener(() => TracksCallBack());
 
-	}
+	   }
     private void DrumKitCallBack()
     {
         SceneManager.LoadScene("DrumKit");
@@ -44,10 +46,14 @@ public class MenuCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("Guitar");
     }
-	private void MicCallBack()
-	{
-		SceneManager.LoadScene("Microphone");
-	}
+  	private void MicCallBack()
+  	{
+  		  SceneManager.LoadScene("Microphone");
+  	}
+    private void TracksCallBack()
+  	{
+  		  SceneManager.LoadScene("Tracks");
+  	}
 
     // Update is called once per frame
     void Update()
