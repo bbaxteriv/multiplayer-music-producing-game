@@ -9,7 +9,7 @@ using UnityEditor;
 public class RecordButton : MonoBehaviour
 {
     private AudioRenderer Renderer;
-    private int clickNumber;
+    private int clickNumber; // make this a public variable that is still modified as is later in script
     public Button RecButton;
     public GameObject TrackPrefab;
 
@@ -19,7 +19,8 @@ public class RecordButton : MonoBehaviour
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
-        clickNumber = 0;
+        // clickNumber = 0; // this resets every time you switch scenes
+        Debug.Log(clickNumber);
 
         Debug.Log(AudioSettings.outputSampleRate);
     }
@@ -50,7 +51,7 @@ public class RecordButton : MonoBehaviour
 
     public void EndRecording()
     {
-        Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
+        Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav"); // the random notes playing is because when the file gets overwritten, it doesn't get erased first, so stuff at the end stays
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
     }
