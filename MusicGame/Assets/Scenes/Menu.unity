@@ -388,7 +388,6 @@ GameObject:
   - component: {fileID: 775868400}
   - component: {fileID: 775868399}
   - component: {fileID: 775868398}
-  - component: {fileID: 775868402}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -477,25 +476,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &775868402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775868397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 793088c1694534c708d1c6483781f163, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrumKitButton: {fileID: 1879103404}
-  PianoButton: {fileID: 1712728715}
-  GridButton: {fileID: 2064802756}
-  HarpButton: {fileID: 1171207516}
-  GuitarButton: {fileID: 1915759137}
-  MicButton: {fileID: 904976371}
-  TracksButton: {fileID: 1953805736}
 --- !u!1 &904976369
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +488,7 @@ GameObject:
   - component: {fileID: 904976373}
   - component: {fileID: 904976372}
   - component: {fileID: 904976371}
+  - component: {fileID: 904976374}
   m_Layer: 5
   m_Name: MicButton
   m_TagString: Untagged
@@ -617,6 +598,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904976369}
   m_CullTransparentMesh: 1
+--- !u!114 &904976374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904976369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 904976371}
+  NewScene: Microphone
 --- !u!1 &1171207514
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +624,7 @@ GameObject:
   - component: {fileID: 1171207518}
   - component: {fileID: 1171207517}
   - component: {fileID: 1171207516}
+  - component: {fileID: 1171207519}
   m_Layer: 5
   m_Name: HarpButton
   m_TagString: Untagged
@@ -738,6 +734,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171207514}
   m_CullTransparentMesh: 1
+--- !u!114 &1171207519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171207514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 1171207516}
+  NewScene: Harp
 --- !u!1 &1334113297
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +999,7 @@ GameObject:
   - component: {fileID: 1712728717}
   - component: {fileID: 1712728716}
   - component: {fileID: 1712728715}
+  - component: {fileID: 1712728718}
   m_Layer: 5
   m_Name: PianoButton
   m_TagString: Untagged
@@ -1098,6 +1109,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712728713}
   m_CullTransparentMesh: 1
+--- !u!114 &1712728718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712728713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 1712728715}
+  NewScene: Piano
 --- !u!1 &1729673887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1378,7 @@ GameObject:
   - component: {fileID: 1879103406}
   - component: {fileID: 1879103405}
   - component: {fileID: 1879103404}
+  - component: {fileID: 1879103407}
   m_Layer: 5
   m_Name: DrumKitButton
   m_TagString: Untagged
@@ -1462,6 +1488,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879103402}
   m_CullTransparentMesh: 1
+--- !u!114 &1879103407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879103402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 1879103404}
+  NewScene: DrumKit
 --- !u!1 &1902176545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,6 +1595,7 @@ GameObject:
   - component: {fileID: 1915759139}
   - component: {fileID: 1915759138}
   - component: {fileID: 1915759137}
+  - component: {fileID: 1915759140}
   m_Layer: 5
   m_Name: GuitarButton
   m_TagString: Untagged
@@ -1664,6 +1705,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915759135}
   m_CullTransparentMesh: 1
+--- !u!114 &1915759140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915759135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 1915759137}
+  NewScene: Guitar
 --- !u!1 &1935625361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1814,7 @@ GameObject:
   - component: {fileID: 1953805738}
   - component: {fileID: 1953805737}
   - component: {fileID: 1953805736}
+  - component: {fileID: 1953805740}
   m_Layer: 5
   m_Name: TracksButton
   m_TagString: Untagged
@@ -1868,6 +1924,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1953805740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953805735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 1953805736}
+  NewScene: Tracks
 --- !u!1 &2064802754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,6 +1950,7 @@ GameObject:
   - component: {fileID: 2064802758}
   - component: {fileID: 2064802757}
   - component: {fileID: 2064802756}
+  - component: {fileID: 2064802759}
   m_Layer: 5
   m_Name: GridButton
   m_TagString: Untagged
@@ -1989,3 +2060,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064802754}
   m_CullTransparentMesh: 1
+--- !u!114 &2064802759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064802754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneButton: {fileID: 2064802756}
+  NewScene: Grid

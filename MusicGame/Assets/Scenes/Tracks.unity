@@ -251,10 +251,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 418509380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a4a8cc45e9baf4aa5943f637e95b55, type: 3}
+  m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuButton: {fileID: 418509383}
+  SceneButton: {fileID: 418509383}
+  NewScene: Menu
 --- !u!114 &418509383
 MonoBehaviour:
   m_ObjectHideFlags: 0
