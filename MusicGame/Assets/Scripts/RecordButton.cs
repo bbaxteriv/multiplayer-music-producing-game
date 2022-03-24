@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
+using UnityEditor;
 
 public class RecordButton : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class RecordButton : MonoBehaviour
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
         clickNumber = 0;
+
+        Debug.Log(AudioSettings.outputSampleRate);
     }
 
     // Update is called once per frame
@@ -48,24 +51,15 @@ public class RecordButton : MonoBehaviour
     public void EndRecording()
     {
         Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
+        AssetDatabase.Refresh();
         Renderer.Rendering = false;
     }
 
-    // figure out how to create newTrack in the Tracks scene
     public void SaveToTrack()
     {
-        // Debug.Log("before coroutine starts");
-        // StartCoroutine(SaveFile());
-        // Debug.Log("should come 3 seconds after coroutine starts");
         GameObject newTrack = Instantiate(TrackPrefab);
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
         StartCoroutine(LoadTracks(newTrack));
-    }
-
-    IEnumerator SaveFile()
-    {
-        // while (!File.Exists("Recordings/recording_" + clickNumber / 2))
-        yield return new WaitForSeconds(3);
     }
 
     IEnumerator LoadTracks(GameObject newTrack)
