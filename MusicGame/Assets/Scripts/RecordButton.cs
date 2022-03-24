@@ -17,6 +17,9 @@ public class RecordButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DeleteRecordings();
+
+
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
@@ -29,6 +32,16 @@ public class RecordButton : MonoBehaviour
     void Update()
     {
 
+    }
+
+    static void DeleteRecordings()
+    {
+        string[] recordingsFolder = { "Assets/Resources/Recordings" };
+        foreach (var asset in AssetDatabase.FindAssets("", recordingsFolder))
+        {
+            var path = AssetDatabase.GUIDToAssetPath(asset);
+            AssetDatabase.DeleteAsset(path);
+        }
     }
 
     // Starts recording first time button is clicked, ends it second time
@@ -62,26 +75,11 @@ public class RecordButton : MonoBehaviour
     {
         GameObject newTrack = Instantiate(TrackPrefab);
 
-        //float length = clipped.length;
-
-        //Debug.Log(length);
-
-        Debug.Log(newTrack.GetComponent<AudioSource>().clip.loadState);
-
-        /*
-        while (newTrack.GetComponent<AudioSource>().clip.loadState != AudioDataLoadState.Loaded)
-        {
-            Debug.Log("Waiting to load audio clip.");
-        }
-        */
-
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
 
         newTrack.GetComponent<Track>().ScaleLength();
 
         StartCoroutine(LoadTracks(newTrack));
-
-        
     }
 
     IEnumerator LoadTracks(GameObject newTrack)
