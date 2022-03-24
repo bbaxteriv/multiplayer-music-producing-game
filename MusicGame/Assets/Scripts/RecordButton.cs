@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
+using UnityEditor;
 
 public class RecordButton : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class RecordButton : MonoBehaviour
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
         clickNumber = 0;
+
+        Debug.Log(AudioSettings.outputSampleRate);
     }
 
     // Update is called once per frame
@@ -47,10 +51,10 @@ public class RecordButton : MonoBehaviour
     public void EndRecording()
     {
         Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
+        AssetDatabase.Refresh();
         Renderer.Rendering = false;
     }
 
-    // figure out how to create newTrack in the Tracks scene
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
