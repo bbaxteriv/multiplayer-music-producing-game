@@ -12,15 +12,6 @@ public class Track : MonoBehaviour
     private AudioClip sound;
     private float length;
 
-
-    /*
-    private void OnMouseDrag()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = mousePos;
-    }
-    */
-
     public void Start()
     {
         

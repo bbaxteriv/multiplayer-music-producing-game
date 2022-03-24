@@ -1,3 +1,34 @@
+Skip to content
+Product 
+Team
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+Sign in
+Sign up
+bbaxteriv
+/
+multiplayer-music-producing-game
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+multiplayer-music-producing-game/MusicGame/.gitignore
+@bbaxteriv
+bbaxteriv Update .gitignore
+Latest commit cb747fe 5 minutes ago
+ History
+ 2 contributors
+@bbaxteriv@katiejl
+74 lines (60 sloc)  1.24 KB
+   
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -72,3 +103,16 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
