@@ -11,6 +11,7 @@ public class RecordButton : MonoBehaviour
     public Button RecButton;
     public GameObject TrackPrefab;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,14 +49,35 @@ public class RecordButton : MonoBehaviour
     {
         Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
         Renderer.Rendering = false;
+
+        AudioClip clipped = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
     }
 
     // figure out how to create newTrack in the Tracks scene
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
+
+        //float length = clipped.length;
+
+        //Debug.Log(length);
+
+        Debug.Log(newTrack.GetComponent<AudioSource>().clip.loadState);
+
+        /*
+        while (newTrack.GetComponent<AudioSource>().clip.loadState != AudioDataLoadState.Loaded)
+        {
+            Debug.Log("Waiting to load audio clip.");
+        }
+        */
+
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
+
+        newTrack.GetComponent<Track>().ScaleLength();
+
         StartCoroutine(LoadTracks(newTrack));
+
+        
     }
 
     IEnumerator LoadTracks(GameObject newTrack)

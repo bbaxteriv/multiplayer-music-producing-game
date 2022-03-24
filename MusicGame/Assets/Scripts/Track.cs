@@ -23,13 +23,7 @@ public class Track : MonoBehaviour
 
     public void Start()
     {
-        sound = this.GetComponent<AudioSource>().clip;
-        length = sound.length;
-        Debug.Log(length);
-
-        Vector3 lTemp = transform.localScale;
-        lTemp.x *= length;
-        transform.localScale = lTemp;
+        
     }
 
     public void Update()
@@ -43,6 +37,17 @@ public class Track : MonoBehaviour
         {
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
         }
+    }
+
+    public void ScaleLength()
+    {
+        sound = this.GetComponent<AudioSource>().clip;
+        length = sound.length;
+        Debug.Log(length);
+
+        Vector3 lTemp = transform.localScale;
+        lTemp.x *= length;
+        transform.localScale = lTemp;
     }
 
     private void OnMouseDown()
