@@ -15,6 +15,33 @@ public class StringScript : MonoBehaviour
     }
 
 
+    void Update()
+    {
+        // Only play note when shift keys not pressed
+        if (!Input.GetKey(KeyCode.RightShift) && !Input.GetKey(KeyCode.LeftShift))
+        {
+            // Get touches to deal with touchscreen
+            foreach (Touch touch in Input.touches)
+            {
+                if (touch.phase == TouchPhase.Began)
+                {
+                    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
+                    if (hit)
+                    {
+                        hit.collider.gameObject.GetComponent<StringScript>().PlayNote();
+                        hit.collider.gameObject.GetComponent<StringScript>().ChangeColor();
+                    }
+                }
+
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    GetComponent<SpriteRenderer>().color = OriginalColor;
+                }
+            }
+        }
+    }
+
+
     // When mouse begins hovering over the string play note and change color
     void OnMouseEnter()
     {
