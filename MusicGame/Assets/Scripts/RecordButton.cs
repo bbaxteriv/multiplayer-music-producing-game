@@ -13,9 +13,13 @@ public class RecordButton : MonoBehaviour
     public Button RecButton;
     public GameObject TrackPrefab;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        DeleteRecordings();
+
+
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
@@ -28,6 +32,16 @@ public class RecordButton : MonoBehaviour
     void Update()
     {
 
+    }
+
+    static void DeleteRecordings()
+    {
+        string[] recordingsFolder = { "Assets/Resources/Recordings" };
+        foreach (var asset in AssetDatabase.FindAssets("", recordingsFolder))
+        {
+            var path = AssetDatabase.GUIDToAssetPath(asset);
+            AssetDatabase.DeleteAsset(path);
+        }
     }
 
     // Starts recording first time button is clicked, ends it second time
@@ -53,12 +67,18 @@ public class RecordButton : MonoBehaviour
         Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
+
+        AudioClip clipped = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
     }
 
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
+
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
+
+        newTrack.GetComponent<Track>().ScaleLength();
+
         StartCoroutine(LoadTracks(newTrack));
     }
 
