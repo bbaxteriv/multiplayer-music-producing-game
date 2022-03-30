@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
+[Serializable]
 public class Track : MonoBehaviour
 {
     private float startPosX;

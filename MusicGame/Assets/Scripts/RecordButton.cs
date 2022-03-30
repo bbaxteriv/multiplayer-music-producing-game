@@ -17,16 +17,12 @@ public class RecordButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DeleteRecordings();
-
-
+        // DeleteRecordings();
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
         // clickNumber = 0; // this resets every time you switch scenes
         Debug.Log(clickNumber);
-
-        Debug.Log(AudioSettings.outputSampleRate);
     }
 
     // Update is called once per frame
@@ -68,18 +64,14 @@ public class RecordButton : MonoBehaviour
         Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav"); // the random notes playing is because when the file gets overwritten, it doesn't get erased first, so stuff at the end stays
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
-
-        AudioClip clipped = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
     }
 
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
-
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
-
         newTrack.GetComponent<Track>().ScaleLength();
-
+        //TrackManager.saveData(newTrack, "track"); // save track to file
         StartCoroutine(LoadTracks(newTrack));
     }
 
