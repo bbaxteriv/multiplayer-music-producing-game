@@ -699,11 +699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300e366503bb4ad428ef6f6b8cfe65ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   SceneButton: {fileID: 1215154264}
   NewScene: Menu
-=======
-  MenuButton: {fileID: 1215154264}
 --- !u!1 &1233522889
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +733,7 @@ MonoBehaviour:
   startServerButton: {fileID: 535750672}
   startHostButton: {fileID: 385466974}
   startClientButton: {fileID: 786974910}
+  playersInGameText: {fileID: 0}
 --- !u!4 &1233522891
 Transform:
   m_ObjectHideFlags: 0
@@ -829,7 +827,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416575313}
   m_CullTransparentMesh: 1
->>>>>>> a4430d81c9732e4c0d69ca529fc03fae769984d5
 --- !u!1 &1446840150
 GameObject:
   m_ObjectHideFlags: 0
