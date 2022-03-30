@@ -30,7 +30,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Threading;
 
-public class SavWav {
+public class SavWav: MonoBehaviour{
 
 	const int HEADER_SIZE = 44;
 	struct ClipData{
@@ -99,7 +99,7 @@ public class SavWav {
 
 		samples.RemoveRange(i, samples.Count - i);
 
-		var clip = AudioClip.Create("TempClip", samples.Count, channels, hz, _3D, stream);
+		var clip = AudioClip.Create("TempClip", samples.Count, channels, hz, stream);
 
 		clip.SetData(samples.ToArray(), 0);
 
@@ -162,7 +162,7 @@ public class SavWav {
 		Byte[] subChunk1 = BitConverter.GetBytes(16);
 		fileStream.Write(subChunk1, 0, 4);
 
-		UInt16 two = 2;
+		
 		UInt16 one = 1;
 
 		Byte[] audioFormat = BitConverter.GetBytes(one);
