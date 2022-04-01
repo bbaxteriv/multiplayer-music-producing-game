@@ -18,7 +18,7 @@ public class MusicBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class MusicBar : MonoBehaviour
         }
         pos = transform.position;
         rb.velocity = new Vector2(speed, 0f);
-        if (pos[0] > 17f)
+        if (pos[0] > 13f)
         {
             transform.position = new Vector3(-1f, 3.99f, 0f);
         }
