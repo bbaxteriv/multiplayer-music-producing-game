@@ -343,9 +343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Menu
-
-'
+  m_Text: Menu
 --- !u!222 &199042122
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -635,10 +633,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Stop
-
-
-'
+  m_Text: Stop
 --- !u!222 &638602608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1606,9 +1601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Record
-
-'
+  m_Text: Record
 --- !u!222 &1373427382
 CanvasRenderer:
   m_ObjectHideFlags: 0
