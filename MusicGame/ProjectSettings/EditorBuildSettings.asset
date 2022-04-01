@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Microphone.unity
     guid: 636381a21871bff4bb01fbe76956cbed
+  - enabled: 1
+    path: Assets/Scenes/Tracks.unity
+    guid: 794f20285ebd75643a09ee7e29d90b64
   m_configObjects: {}

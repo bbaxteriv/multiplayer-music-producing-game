@@ -15,14 +15,11 @@ public class Guitar : MonoBehaviour
         OriginalColor = GetComponent<SpriteRenderer>().color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
+    // Play chord selected from the dropdown menu
     public void PlayChord()
     {
+        // Skip first value because it is just "select chord"
         if (Dropdown.value == 0)
         {
             return;

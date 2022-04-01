@@ -2,60 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drum : MonoBehaviour
+public class Drum : Note
 {
-    private Color OriginalColor;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        OriginalColor = GetComponent<SpriteRenderer>().color;
-    }
-
-    // Update is called once per frame
+    // Check if touchscreen is being used every frame
     void Update()
     {
-        foreach (Touch touch in Input.touches)
-        {
-            if (touch.phase == TouchPhase.Began)
-            {
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
-                if (hit) // touchscreen
-                {
-                    hit.collider.gameObject.GetComponent<Drum>().PlayNote();
-                    //hit.collider.gameObject.GetComponent<Drum>().ChangeColor();
-                }
-            }
-
-            /*if (touch.phase == TouchPhase.Ended)
-            {
-                RestoreColor();
-            }*/
-        }
+        base.Touchscreen();
     }
 
-    void OnMouseDown() // mouse click
+
+    // Play note and change color when clicked
+    void OnMouseDown()
     {
-        PlayNote();
+		base.PlayNote();
+        base.ChangeColor();
     }
 
-    /*void OnMouseUp()
-    {
-        RestoreColor();
-    }*/
 
-    void PlayNote()
+    // Restore color when mouse stops clicking
+    void OnMouseUp()
     {
-        GetComponent<AudioSource>().Play();
+        base.RestoreColor();
     }
-
-    /*void ChangeColor()
-    {
-        GetComponent<SpriteRenderer>().color = new Color(210f/255f, 210f/255f, 210f/255f);
-    }
-
-    void RestoreColor()
-    {
-        GetComponent<SpriteRenderer>().color = OriginalColor;
-    }*/
 }

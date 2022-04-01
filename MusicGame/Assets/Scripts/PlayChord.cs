@@ -11,15 +11,12 @@ public class PlayChord : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // When play button is clicked, play note
         PlayButton.onClick.AddListener(() => Play());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
+    // Get guitar to play chord
     void Play()
     {
         Guitar.PlayChord();
