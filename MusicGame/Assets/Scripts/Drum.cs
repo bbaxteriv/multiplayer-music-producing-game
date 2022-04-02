@@ -14,7 +14,7 @@ public class Drum : Note
     // Play note and change color when clicked
     void OnMouseDown()
     {
-		    base.PlayNote();
+		base.PlayNote();
         base.ChangeColor();
     }
 

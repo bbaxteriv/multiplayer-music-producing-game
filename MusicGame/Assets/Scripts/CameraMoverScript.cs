@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMover : MonoBehaviour
+public class CameraMoverScript : MonoBehaviour
 {
     private int _width = 16;
     private int _height = 9;
