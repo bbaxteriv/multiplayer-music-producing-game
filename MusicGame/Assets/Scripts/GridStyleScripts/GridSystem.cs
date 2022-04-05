@@ -23,7 +23,7 @@ public class GridSystem : MonoBehaviour
         {
             for (int y = 0; y < _height; y++)
             {
-                var spawnedTile = Instantiate(_tilePrefab, new Vector3(x, y), Quaternion.identity);
+                var spawnedTile = Instantiate(_tilePrefab, new Vector3(x*0.9f-0.5f, y*0.9f+0.4f), Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
 
                _tiles[new Vector2(x, y)] = spawnedTile;
@@ -32,7 +32,7 @@ public class GridSystem : MonoBehaviour
 
         _cam.transform.position = new Vector3((float)_width / 2 - 0.5f, (float)_height / 2 - 0.5f, -10);
     }
-    
+
     public Tile GetTileAtPosition(Vector2 pos)
     {
         if(_tiles.TryGetValue(pos,out var tile))
@@ -41,5 +41,5 @@ public class GridSystem : MonoBehaviour
         }
         return null;
     }
-    
+
 }

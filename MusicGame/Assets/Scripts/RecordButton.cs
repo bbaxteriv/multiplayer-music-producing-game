@@ -9,29 +9,17 @@ using UnityEditor;
 public class RecordButton : MonoBehaviour
 {
     private AudioRenderer Renderer;
-    private int clickNumber;
     public Button RecButton;
     public GameObject TrackPrefab;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        DeleteRecordings();
-
-
+        // DeleteRecordings();
         Camera MainCamera = Camera.main;
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
-        clickNumber = 0;
-
-        Debug.Log(AudioSettings.outputSampleRate);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Debug.Log(Globals.clickNumber);
     }
 
     static void DeleteRecordings()
@@ -47,9 +35,9 @@ public class RecordButton : MonoBehaviour
     // Starts recording first time button is clicked, ends it second time
     public void Record()
     {
-        clickNumber++;
+        Globals.clickNumber++;
 
-        if (clickNumber % 2 == 1) // start recording
+        if (Globals.clickNumber % 2 == 1) // start recording
         {
             Renderer.Rendering = true;
             RecButton.GetComponent<Image>().color = new Color(166f/255f, 0, 0);
@@ -64,25 +52,20 @@ public class RecordButton : MonoBehaviour
 
     public void EndRecording()
     {
-        Renderer.Save("./Assets/Resources/Recordings/recording_" + clickNumber / 2 + ".wav");
+        Renderer.Save("./Assets/Resources/Recordings/recording_" + Globals.clickNumber / 2 + ".wav"); // the random notes playing is because when the file gets overwritten, it doesn't get erased first, so stuff at the end stays
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
-
-        AudioClip clipped = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
     }
 
     public void SaveToTrack()
     {
         GameObject newTrack = Instantiate(TrackPrefab);
-
-        newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + clickNumber / 2);
-
+        newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + Globals.clickNumber / 2);
         newTrack.GetComponent<Track>().ScaleLength();
-
-        StartCoroutine(LoadTracks(newTrack));
+        StartCoroutine(LoadTracksScene(newTrack));
     }
 
-    IEnumerator LoadTracks(GameObject newTrack)
+    IEnumerator LoadTracksScene(GameObject newTrack)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Tracks", LoadSceneMode.Additive);
@@ -91,6 +74,7 @@ public class RecordButton : MonoBehaviour
         {
             yield return null;
         }
+        
         SceneManager.MoveGameObjectToScene(newTrack, SceneManager.GetSceneByName("Tracks"));
         SceneManager.UnloadSceneAsync(currentScene);
     }

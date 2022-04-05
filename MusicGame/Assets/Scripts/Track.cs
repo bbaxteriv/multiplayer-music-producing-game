@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class Track : MonoBehaviour
 {
-    private float startPosX;
-    private float startPosY;
-    private bool isBeingHeld = false;
-    private AudioClip sound;
-    private float length;
-
-    public void Start()
-    {
-        
-    }
+    public float startPosX;
+    public float startPosY;
+    public bool isBeingHeld = false;
+    public AudioClip sound;
+    public float length;
 
     public void Update()
     {
@@ -34,7 +30,6 @@ public class Track : MonoBehaviour
     {
         sound = this.GetComponent<AudioSource>().clip;
         length = sound.length;
-        Debug.Log(length);
 
         Vector3 lTemp = transform.localScale;
         lTemp.x *= length;
