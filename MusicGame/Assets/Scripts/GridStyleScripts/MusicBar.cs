@@ -15,28 +15,26 @@ public class MusicBar : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     private void FixedUpdate()
     {
         speed = 2f;
+        // Get input speed
         int number;
         if (int.TryParse(speedText.text.ToString(), out number))
         {
             speed = number;
         }
+        // Set max speed
         if (speed > 20f)
         {
             speed = 20f;
         }
+        
         pos = transform.position;
         rb.velocity = new Vector2(speed, 0f);
-        if (pos[0] > 17f)
+        // Go back to beginning of grid after reaching the end
+        if (pos[0] > 13f)
         {
             transform.position = new Vector3(-1f, 3.99f, 0f);
         }
