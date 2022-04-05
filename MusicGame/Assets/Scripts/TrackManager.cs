@@ -6,6 +6,24 @@ using System.IO;
 public class TrackManager : MonoBehaviour
 {
     public GameObject TrackPrefab;
+    public static bool TracksReset = false;
+
+    void Start()
+    {
+        if (!TracksReset)
+        {
+            TracksReset = true;
+
+            DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
+            FileInfo[] files = d.GetFiles();
+            int numFiles = files.Length;
+
+            for (int i = 1; i <= numFiles; i++)
+            {
+                File.Delete(Application.persistentDataPath + "/track_" + i + ".txt");
+            }   
+        }
+    }
 
     public void SaveTracks()
     {
@@ -26,7 +44,6 @@ public class TrackManager : MonoBehaviour
         DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
         FileInfo[] files = d.GetFiles();
         int numFiles = files.Length;
-        Debug.Log("Number of files: " + numFiles);
 
         for (int i = 1; i <= numFiles; i++)
         {
