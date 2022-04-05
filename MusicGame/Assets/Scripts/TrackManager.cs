@@ -3,15 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class TempTrackSave : MonoBehaviour
+public class TrackManager : MonoBehaviour
 {
     public GameObject TrackPrefab;
+    public static bool TracksReset = false;
+
+    void Start()
+    {
+        if (!TracksReset)
+        {
+            TracksReset = true;
+
+            DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
+            FileInfo[] files = d.GetFiles();
+            int numFiles = files.Length;
+
+            for (int i = 1; i <= numFiles; i++)
+            {
+                File.Delete(Application.persistentDataPath + "/track_" + i + ".txt");
+            }   
+        }
+    }
 
     public void SaveTracks()
     {
         var allTracks = FindObjectsOfType<Track>();
         int i = 1;
-        // TrackSaver.SaveTracks(allTracks[0]);
 
         foreach (Track track in allTracks)
         {
@@ -22,10 +39,11 @@ public class TempTrackSave : MonoBehaviour
 
     public void LoadTracks()
     {
+        // ResetTracks();
+
         DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
         FileInfo[] files = d.GetFiles();
         int numFiles = files.Length;
-        Debug.Log(numFiles);
 
         for (int i = 1; i <= numFiles; i++)
         {
@@ -44,5 +62,15 @@ public class TempTrackSave : MonoBehaviour
 
             newTrack.GetComponent<Track>().ScaleLength();  
         }   
+    }
+
+    public void ResetTracks()
+    {
+        var resetTracks = FindObjectsOfType<Track>();
+        
+        foreach (Track track in resetTracks)
+        {
+            Destroy(track.gameObject);
+        }
     }
 }
