@@ -13,20 +13,20 @@ public class RecordMic : MonoBehaviour
 	private AudioSource audioSource;
 	private string DeviceName;
 	private AudioClip audioClip;
-	private SavWav sw;
+	//private SavWav sw;
     // Start is called before the first frame update
-	
+
 	void Start()
 	{
 		DeviceName = Microphone.devices[0];
 		audioSource = GetComponent<AudioSource> ();
-		sw = GameObject.FindWithTag("GameObject").GetComponent<SavWav>();
+		//sw = GameObject.FindWithTag("GameObject").GetComponent<SavWav>();
 	}
-	
+
 	void Update() {
 
 		float[] spectrum = new float [numberOfSamples];
-		
+
 		AudioListener.GetSpectrumData(spectrum, 0, fftWindow);
 
 		// loop over audioSpectrumObjects and modify according to fequency spectrum data
@@ -34,26 +34,26 @@ public class RecordMic : MonoBehaviour
 		for(int i = 0; i < TransformingObjects.Length; i++)
 		{
 			float intensity = spectrum[i] * heightMultiplier;
-			
+
 			float lerpY = Mathf.Lerp(TransformingObjects[i].localScale.y, intensity, lerpTime);
 			Vector3 newScale = new Vector3(TransformingObjects[i].localScale.x, lerpY, TransformingObjects[i].localScale.z);
-			
+
 			TransformingObjects[i].localScale = newScale;
 		}
 	}
-	
+
     public void StartRecord()
     {
 		Microphone.End(DeviceName);
 		audioSource.clip = Microphone.Start(DeviceName, true, 3000, 44100);
 		Debug.Log(Microphone.IsRecording(DeviceName).ToString());
 
-		if (Microphone.IsRecording (DeviceName)) { 
+		if (Microphone.IsRecording (DeviceName)) {
 			while (!(Microphone.GetPosition (DeviceName) > 0)) {
 			}
-		
+
 			Debug.Log ("recording started with " + DeviceName);
-			audioSource.Play (); 
+			audioSource.Play ();
 		} else {
 
 			Debug.Log (DeviceName + " doesn't work!");
@@ -61,21 +61,21 @@ public class RecordMic : MonoBehaviour
 
 
     }
-	
+
 	public void StopRecord()
 	{
 		Microphone.End(DeviceName);
 		audioClip = audioSource.clip;
 	}
-	
+
 	public void PlayBack()
 	{
 		audioSource.Play();
 	}
-	
+
 	public void Save()
 	{
-		sw.Save("myVoice", audioClip);
+		//sw.Save("myVoice", audioClip);
 	}
-	
+
 }
