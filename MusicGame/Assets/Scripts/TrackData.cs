@@ -7,7 +7,6 @@ public class TrackData
 {
     public float startPosX;
     public float startPosY;
-    public bool isBeingHeld;
     public float[] samples;
     public float length;
 
@@ -15,7 +14,6 @@ public class TrackData
     {
         startPosX = track.startPosX;
         startPosY = track.startPosY;
-        isBeingHeld = track.isBeingHeld;
         length = track.length;
 
         AudioSource audioSource = track.GetComponent<AudioSource>();
