@@ -11,7 +11,6 @@ public class RecordButton : MonoBehaviour
     private AudioRenderer Renderer;
     public Button RecButton;
     public GameObject TrackPrefab;
-    public static bool RecordingsDeleted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +19,11 @@ public class RecordButton : MonoBehaviour
         Renderer = MainCamera.GetComponent<AudioRenderer>();
         Renderer.Rendering = false;
 
-        if (!RecordingsDeleted)
+        if (!Globals.recordingsDeleted)
         {
-            RecordingsDeleted = true;
+            Globals.recordingsDeleted = true;
             DeleteRecordings();
         }
-
-        Debug.Log(Globals.clickNumber);
     }
 
     static void DeleteRecordings()

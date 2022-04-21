@@ -31,7 +31,6 @@ using System.Collections.Generic;
 using System.Threading;
 
 public class SavWav: MonoBehaviour{
-
 	const int HEADER_SIZE = 44;
 	struct ClipData{
 
