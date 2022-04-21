@@ -7,8 +7,6 @@ public class TrackManager : MonoBehaviour
 {
     public GameObject TrackPrefab;
     public static bool TracksReset = false;
-    private int _width = 16;
-    private int _height = 9;
 
     void Start()
     {
@@ -50,7 +48,7 @@ public class TrackManager : MonoBehaviour
         for (int i = 1; i <= numFiles; i++)
         {
             TrackData data = TrackSaver.LoadTracks(i);
-            GameObject newTrack = Instantiate(TrackPrefab, new Vector3((float)_width / 2 - 0.5f + data.startPosX, (float)_height / 2 - 0.5f + data.startPosY, 0), Quaternion.identity); // weird positions because camera is moved in tracks scene
+            GameObject newTrack = Instantiate(TrackPrefab, new Vector3(data.xPos, data.yPos, 0), Quaternion.identity);
 
             newTrack.GetComponent<Track>().length = data.length;
 
