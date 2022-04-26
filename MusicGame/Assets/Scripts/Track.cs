@@ -12,6 +12,7 @@ public class Track : MonoBehaviour
     public bool isBeingHeld = false;
     public AudioClip sound;
     public float length;
+    public int trackNumber;
 
     public void Update()
     {

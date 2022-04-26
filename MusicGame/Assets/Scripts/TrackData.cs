@@ -9,6 +9,8 @@ public class TrackData
     public float yPos;
     public float[] samples;
     public float length;
+    public int channels;
+    public int frequency;
 
     public TrackData(Track track)
     {
@@ -21,5 +23,8 @@ public class TrackData
         AudioSource audioSource = track.GetComponent<AudioSource>();
         samples = new float[audioSource.clip.samples * audioSource.clip.channels];
         audioSource.clip.GetData(samples, 0);
+
+        channels = audioSource.clip.channels;
+        frequency = audioSource.clip.frequency;
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using Mono.Data.Sqlite;
@@ -53,7 +53,6 @@ public class SQLManager : MonoBehaviour
                 string username = reader.GetString(0);
                 string wav = reader.GetString(1);
                 string rating = (string) reader.GetString(2);
-
                 // Get row of data and add to list
                 string[] row = {username, wav, rating};
                 data.Add(row);
@@ -70,3 +69,4 @@ public class SQLManager : MonoBehaviour
     return data;
   }
 }
+*/

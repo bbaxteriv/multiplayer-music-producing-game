@@ -18,6 +18,11 @@ public class SceneSwitch : MonoBehaviour
   // Load new scene
   void SceneCallBack()
   {
+    if (SceneManager.GetActiveScene().name.Equals("Tracks")) // saves tracks when leaving tracks scene
+    {
+      TrackManager.UpdatePositions();
+    }
+
     SceneManager.LoadScene(NewScene);
   }
 }
