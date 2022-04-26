@@ -20,30 +20,23 @@ public class PlayersManager : Singleton<PlayersManager>
 
     private void Start()
     {
-        
-        
-        NetworkManager.Singleton.OnClientConnectedCallback +=(id) =>
+        //this code should have "if (IsServer)" stuff but it seems deprecated...
+        //if something breaks is probably "NetworkManager.Singleton.IsServer"
+        NetworkManager.Singleton.OnClientConnectedCallback += (id) =>
         {
-            /*
-            if(IsServer)
+            if (NetworkManager.Singleton.IsServer)
             {
                 Debug.Log($"{id} just connected...");
                 playersInGame.Value++;
             }
-            */
         };
-
         NetworkManager.Singleton.OnClientDisconnectCallback += (id) =>
         {
-            /*
-            if (IsServer)
+            if (NetworkManager.Singleton.IsServer)
             {
-                Debug.Log($"{id} just connected...");
+                Debug.Log($"{id} just disconnected...");
                 playersInGame.Value--;
-            }
-            */
+            } 
         };
-      
     }
-        
 }
