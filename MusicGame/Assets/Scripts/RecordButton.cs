@@ -50,7 +50,8 @@ public class RecordButton : MonoBehaviour
         {
             RecButton.GetComponent<Image>().color = new Color(1, 0, 0);
             EndRecording();
-            SaveToTrack();
+            SaveToTrack(); 
+            SceneManager.LoadScene("Tracks");           
         }
     }
 
@@ -65,21 +66,10 @@ public class RecordButton : MonoBehaviour
     {
         GameObject newTrack = Instantiate(TrackPrefab);
         newTrack.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Recordings/recording_" + Globals.clickNumber / 2);
-        newTrack.GetComponent<Track>().ScaleLength();
-        StartCoroutine(LoadTracksScene(newTrack));
-    }
+        AudioClip audioClip = newTrack.GetComponent<AudioClip>();
+        newTrack.GetComponent<Track>().ScaleLength();    
 
-    IEnumerator LoadTracksScene(GameObject newTrack)
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Tracks", LoadSceneMode.Additive);
-
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-        
-        SceneManager.MoveGameObjectToScene(newTrack, SceneManager.GetSceneByName("Tracks"));
-        SceneManager.UnloadSceneAsync(currentScene);
+        TrackData newTrackData = new TrackData(newTrack.GetComponent<Track>());
+        Globals.TrackList.Add(newTrackData);
     }
 }

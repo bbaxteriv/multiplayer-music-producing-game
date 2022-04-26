@@ -6,59 +6,44 @@ using System.IO;
 public class TrackManager : MonoBehaviour
 {
     public GameObject TrackPrefab;
-    public static bool TracksReset = false;
 
     void Start()
     {
-        if (!TracksReset)
-        {
-            TracksReset = true;
-
-            DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
-            FileInfo[] files = d.GetFiles();
-            int numFiles = files.Length;
-
-            for (int i = 1; i <= numFiles; i++)
-            {
-                File.Delete(Application.persistentDataPath + "/track_" + i + ".txt");
-            }   
-        }
-    }
-
-    public void SaveTracks()
-    {
-        var allTracks = FindObjectsOfType<Track>();
-        int i = 1;
-
-        foreach (Track track in allTracks)
-        {
-            TrackSaver.SaveTracks(track, i);
-            i++;
-        }
+        LoadTracks();
     }
 
     public void LoadTracks()
     {
-        // ResetTracks();
-
-        DirectoryInfo d = new DirectoryInfo(Application.persistentDataPath);
-        FileInfo[] files = d.GetFiles();
-        int numFiles = files.Length;
-
-        for (int i = 1; i <= numFiles; i++)
+        int i = 0;
+        foreach (TrackData data in Globals.TrackList)
         {
-            TrackData data = TrackSaver.LoadTracks(i);
             GameObject newTrack = Instantiate(TrackPrefab, new Vector3(data.xPos, data.yPos, 0), Quaternion.identity);
 
             newTrack.GetComponent<Track>().length = data.length;
 
             AudioSource source = newTrack.GetComponent<AudioSource>();
-            source.clip = Resources.Load<AudioClip>("Recordings/recording_" + i); // AudioClip needs to have value before using SetData
+            source.clip = AudioClip.Create("clip", data.samples.Length, data.channels, data.frequency, false);
             source.clip.SetData(data.samples, 0);
             newTrack.GetComponent<Track>().sound = source.clip;
+            newTrack.GetComponent<Track>().trackNumber = i;
 
             newTrack.GetComponent<Track>().ScaleLength();  
-        }   
+            i++;
+        }
+    }
+
+    public static void UpdatePositions()
+    {
+        var allTracks = FindObjectsOfType<Track>();
+
+        foreach (Track track in allTracks)
+        {
+            TrackData data = Globals.TrackList[track.trackNumber];
+            Vector3 p = track.transform.position;
+
+            data.xPos = p.x;
+            data.yPos = p.y;
+        }
     }
 
     public void ResetTracks()
@@ -69,5 +54,7 @@ public class TrackManager : MonoBehaviour
         {
             Destroy(track.gameObject);
         }
+
+        Globals.TrackList.Clear();
     }
 }
