@@ -5,17 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class TrackData
 {
-    public float startPosX;
-    public float startPosY;
-    public bool isBeingHeld;
+    public float xPos; // startposx isn't always the current position
+    public float yPos;
     public float[] samples;
     public float length;
 
     public TrackData(Track track)
     {
-        startPosX = track.startPosX;
-        startPosY = track.startPosY;
-        isBeingHeld = track.isBeingHeld;
+        Vector3 p = track.transform.position;
+        xPos = p.x;
+        yPos = p.y;
+        
         length = track.length;
 
         AudioSource audioSource = track.GetComponent<AudioSource>();

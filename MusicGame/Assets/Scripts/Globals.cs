@@ -5,4 +5,5 @@ using UnityEngine;
 static class Globals
 {
     public static int clickNumber;
+    public static bool recordingsDeleted = false;
 }

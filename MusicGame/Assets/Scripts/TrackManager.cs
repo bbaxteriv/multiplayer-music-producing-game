@@ -48,11 +48,8 @@ public class TrackManager : MonoBehaviour
         for (int i = 1; i <= numFiles; i++)
         {
             TrackData data = TrackSaver.LoadTracks(i);
-            GameObject newTrack = Instantiate(TrackPrefab);
+            GameObject newTrack = Instantiate(TrackPrefab, new Vector3(data.xPos, data.yPos, 0), Quaternion.identity);
 
-            newTrack.GetComponent<Track>().startPosX = data.startPosX;
-            newTrack.GetComponent<Track>().startPosY = data.startPosY;
-            newTrack.GetComponent<Track>().isBeingHeld = data.isBeingHeld;
             newTrack.GetComponent<Track>().length = data.length;
 
             AudioSource source = newTrack.GetComponent<AudioSource>();
