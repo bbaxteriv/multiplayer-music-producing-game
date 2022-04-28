@@ -15,6 +15,16 @@ public class Track : MonoBehaviour
     public int trackNumber;
     public float constantLengthFactor = 1.15f;
 
+    private GameObject bar;
+    private float barSpeed;
+    private Vector3 storedLength;
+    private Vector3 newLength;
+
+    private void Awake()
+    {
+        bar = GameObject.Find("MusicBar");
+    }
+
     public void Update()
     {
         Vector3 mousePos;
@@ -25,6 +35,13 @@ public class Track : MonoBehaviour
         {
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
         }
+
+        barSpeed = bar.GetComponent<MusicBar>().speed;
+
+        newLength = storedLength;
+        newLength.x *= (barSpeed / 2f);
+
+        transform.localScale = newLength;
     }
 
     public void ScaleLength()
@@ -36,6 +53,9 @@ public class Track : MonoBehaviour
 
         Vector3 lTemp = transform.localScale;
         lTemp.x *= length;
+
+        storedLength = lTemp;
+
         transform.localScale = lTemp;
     }
 

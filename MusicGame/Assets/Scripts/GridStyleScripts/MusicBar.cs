@@ -8,7 +8,9 @@ public class MusicBar : MonoBehaviour
     private Rigidbody2D rb;
     public Vector3 pos;
     public Text speedText;
-    private float speed;
+    public float speed;
+
+
 
     private void Awake()
     {
