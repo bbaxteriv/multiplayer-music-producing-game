@@ -13,6 +13,7 @@ public class Track : MonoBehaviour
     public AudioClip sound;
     public float length;
     public int trackNumber;
+    public float constantLengthFactor = 1.15f;
 
     public void Update()
     {
@@ -30,6 +31,8 @@ public class Track : MonoBehaviour
     {
         sound = this.GetComponent<AudioSource>().clip;
         length = sound.length;
+
+        length *= constantLengthFactor;
 
         Vector3 lTemp = transform.localScale;
         lTemp.x *= length;
