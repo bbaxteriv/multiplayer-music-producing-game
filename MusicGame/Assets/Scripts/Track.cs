@@ -63,7 +63,20 @@ public class Track : MonoBehaviour
         AudioSource noteToPlay = GetComponent<AudioSource>();
 
         noteToPlay.PlayOneShot(sound, 1.0f);
-        
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Trash" && !Input.GetMouseButton(0))
+        {
+            DeleteTrack();
+        }
     }
     
+    public void DeleteTrack()
+    {
+        Globals.TrackList.RemoveAt(trackNumber);
+        Globals.deletedTracks.Add(trackNumber);
+        Destroy(gameObject);
+    }
 }
