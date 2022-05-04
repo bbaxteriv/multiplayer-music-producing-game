@@ -57,7 +57,7 @@ public class RecordButton : MonoBehaviour
 
     public void EndRecording()
     {
-        Renderer.Save("./Assets/Resources/Recordings/recording_" + Globals.clickNumber / 2 + ".wav"); // the random notes playing is because when the file gets overwritten, it doesn't get erased first, so stuff at the end stays
+        Renderer.Save("./Assets/Resources/Recordings/recording_" + Globals.clickNumber / 2 + ".wav");
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
     }
