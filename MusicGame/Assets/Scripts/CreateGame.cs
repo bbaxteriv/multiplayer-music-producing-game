@@ -21,13 +21,13 @@ public class CreateGame : MonoBehaviour
     void createGame()
     {
       string name = gameName.text;
-      int id = getGameID();
+      int id = getGameID(name);
       gameID.text = id.ToString();
 
     }
 
 
-    int getGameID()
+    int getGameID(string name)
     {
       // create game through sql
       // add player to game
