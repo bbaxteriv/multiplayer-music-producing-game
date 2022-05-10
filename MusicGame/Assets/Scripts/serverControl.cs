@@ -12,7 +12,7 @@ public class serverControl : MonoBehaviour
             "http://localhost/addtrack.php?";
     public string displayURL =
              "http://localhost/display.php";
-    public Text wavTextInput;
+    public Text usernameTextInput;
     public Text wavResultText;
 
     public void GetScoreBtn()
@@ -23,8 +23,8 @@ public class serverControl : MonoBehaviour
     
     public void SendScoreBtn()
     {
-        StartCoroutine(PostScores(wavTextInput.text));
-        wavTextInput.gameObject.transform.parent.GetComponent<InputField>().text = "";
+        StartCoroutine(PostScores(usernameTextInput.text));
+        usernameTextInput.gameObject.transform.parent.GetComponent<InputField>().text = "";
     }
     
     IEnumerator GetScores()
@@ -32,8 +32,7 @@ public class serverControl : MonoBehaviour
         UnityWebRequest hs_get = UnityWebRequest.Get(displayURL);
         yield return hs_get.SendWebRequest();
         if (hs_get.error != null)
-            Debug.Log("There was an error getting the display: "
-                    + hs_get.error);
+            Debug.Log("There was an error getting the display: " + hs_get.error);
         else
         {
             string dataText = hs_get.downloadHandler.text;
@@ -49,13 +48,11 @@ public class serverControl : MonoBehaviour
     
     IEnumerator PostScores(string wav)
     {
-        string post_url = addTrackURL + "Username=testtt" + "&Wav="
-               + wav + "&Rating=101" + "&ID=777";
+        string post_url = addTrackURL + "Username=testtt" + "&Wav=" + wav + "&Rating=10000" + "&ID=502" + "&gameid=102";
         Debug.Log(post_url);
         UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
         yield return hs_post.SendWebRequest();
         if (hs_post.error != null)
-            Debug.Log("There was an error posting the high score: "
-                    + hs_post.error);
+            Debug.Log("There was an error posting the high score: " + hs_post.error);
     }
 }
