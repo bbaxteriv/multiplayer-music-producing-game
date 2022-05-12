@@ -6,7 +6,7 @@ public class StringScript : Note
 {
 	private bool playable = true;
 	private SpriteRenderer sprite;
-	
+
 	void Start()
 	{
 		sprite = GetComponent<SpriteRenderer>();
@@ -49,9 +49,9 @@ public class StringScript : Note
     // When mouse stops hovering restore color
     void OnMouseExit()
     {
-		if(playable == true)
-		{
-        	base.RestoreColor();
-		}
+			if(playable == true)
+			{
+	       base.RestoreColor();
+			}
     }
 }
