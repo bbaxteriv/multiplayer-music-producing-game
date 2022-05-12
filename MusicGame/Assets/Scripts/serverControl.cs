@@ -9,9 +9,9 @@ using UnityEngine.UI;
 public class serverControl : MonoBehaviour
 {
     public string addTrackURL =
-            "http://localhost/addtrack.php?";
+            "https://1920.lakeside-cs.org/MultiplayerMusicGame/MusicGame/addtrack.php?";
     public string displayURL =
-             "http://localhost/display.php";
+             "https://1920.lakeside-cs.org/MultiplayerMusicGame/MusicGame/display.php";
     public Text usernameTextInput;
     public Text wavResultText;
 
