@@ -29,7 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tracks.unity
     guid: 794f20285ebd75643a09ee7e29d90b64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MultiplayerTesting.unity
     guid: 8e35a38aef79c487085cb06d14b8648f
+  - enabled: 1
+    path: Assets/Scenes/StartPage.unity
+    guid: 201213569940c4ec7a1dac27f0bdd8fa
+  - enabled: 1
+    path: Assets/Scenes/CreateGame.unity
+    guid: 6dff71d9702429b46b08577a13b14b4f
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: d6570badd3f12462c966ae8c065ce5de
+  - enabled: 1
+    path: Assets/Scenes/JoinGame.unity
+    guid: 7b25060bcc33c2f48bea8c8e708e8968
   m_configObjects: {}
