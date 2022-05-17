@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 
 public class JoinGame : MonoBehaviour
 {
+    private string joinGameURL = "https://1920.lakeside-cs.org/MultiplayerMusicGame/MusicGame/joingame.php?";
     public Button joinGameButton;
     public Text gameID;
     public Text gameName;
@@ -13,43 +17,22 @@ public class JoinGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      joinGameButton.onClick.AddListener(() => joinGame());
+      joinGameButton.onClick.AddListener(() =>
+          StartCoroutine(joinGame(gameName.text, gameID.text)));
     }
 
 
-    // create new game and display id when button is pressed
-    void joinGame()
+    IEnumerator joinGame(string name, string id)
     {
-      string name = gameName.text;
-      int id;
-      int.TryParse(gameID.text, out id);
-      bool success = joinGame(name, id);
-      if (success)
-      {
-        Debug.Log("success\nname: " + name + "\nid: " + id.ToString());
-      }
-      else
-      {
-        Debug.Log("failed to join game\nname: " + name + "\nid: " + id.ToString());
-      }
-    }
-
-
-    bool joinGame(string name, int id)
-    {
-      // check for game through sql
-      // add player to game
-      /*
-      results = SELECT id FROM music_game_games WHERE name = ? and id = ?;
-      names = SELECT name FROM music_game_players WHERE game_id = ?;
-      if name in names
-        name in use
-      if length results == 1
-        INSERT INTO music_game_players (name, game_id) VALUES(?, ?);
-      else
-        password or name is incorrect
-      */
-      //to complete later
-      return false;
+        // Build url string with parameters
+        string post_url = joinGameURL + "gamename=" + name + "&id="
+                        + id + "&username=TESTUSER";
+        Debug.Log(post_url);
+        // Execute request
+        UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
+        yield return hs_post.SendWebRequest();
+        // Display error
+        if (hs_post.error != null)
+            Debug.Log("There was an error in joining the game: " + hs_post.error);
     }
 }
