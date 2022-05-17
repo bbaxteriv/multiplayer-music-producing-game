@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneButton: {fileID: 739477525}
-  NewScene: StartMenu
+  NewScene: StartPage
 --- !u!1 &1047159886
 GameObject:
   m_ObjectHideFlags: 0
