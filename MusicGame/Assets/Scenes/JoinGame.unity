@@ -1407,4 +1407,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneButton: {fileID: 2042750746}
-  NewScene: StartMenu
+  NewScene: StartPage
