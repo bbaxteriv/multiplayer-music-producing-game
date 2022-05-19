@@ -9,8 +9,8 @@ public class MusicBar : MonoBehaviour
     public Vector3 pos;
     public Text speedText;
     public float speed;
-
-
+    public Text lengthText;
+    public float length;
 
     private void Awake()
     {
