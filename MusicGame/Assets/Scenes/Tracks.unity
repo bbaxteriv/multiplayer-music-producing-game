@@ -2023,7 +2023,6 @@ GameObject:
   - component: {fileID: 1769687093}
   - component: {fileID: 1769687099}
   - component: {fileID: 1769687098}
-  - component: {fileID: 1769687097}
   - component: {fileID: 1769687100}
   - component: {fileID: 1769687101}
   m_Layer: 5
@@ -2116,18 +2115,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1769687097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769687092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35044308d653c461bb92962ac26caf34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1769687098
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2582,7 +2569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131962292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7803, y: 1.0155, z: 0}
+  m_LocalPosition: {x: -3.2, y: 0.51, z: 0}
   m_LocalScale: {x: 0.1677976, y: 0.15918304, z: 0.2192}
   m_Children: []
   m_Father: {fileID: 0}
