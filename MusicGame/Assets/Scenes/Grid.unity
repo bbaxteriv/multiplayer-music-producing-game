@@ -804,6 +804,8 @@ MonoBehaviour:
   pos: {x: 0, y: 0, z: 0}
   speedText: {fileID: 713771774}
   speed: 0
+  lengthText: {fileID: 0}
+  length: 0
 --- !u!50 &1047336434
 Rigidbody2D:
   serializedVersion: 4
@@ -1258,7 +1260,6 @@ GameObject:
   - component: {fileID: 1769687093}
   - component: {fileID: 1769687099}
   - component: {fileID: 1769687098}
-  - component: {fileID: 1769687097}
   - component: {fileID: 1769687100}
   m_Layer: 5
   m_Name: Canvas
@@ -1352,18 +1353,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1769687097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769687092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35044308d653c461bb92962ac26caf34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1769687098
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1700,9 +1689,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1769687092}
+      - m_Target: {fileID: 1769687100}
         m_TargetAssemblyTypeName: RecordButton, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Record
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
