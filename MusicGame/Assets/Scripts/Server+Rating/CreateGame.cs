@@ -15,6 +15,7 @@ public class CreateGame : MonoBehaviour
     public Button createGameButton;
     public Text gameID;
     public Text gameName;
+    public Text username;
 
     // Start is called before the first frame update
     void Start()
@@ -49,16 +50,16 @@ public class CreateGame : MonoBehaviour
         Debug.Log("There was an error getting the game id: " + hs_get.error);
       // Get id
       string dataText = hs_get.downloadHandler.text;
-      Debug.Log("hello " + dataText + ".");
       gameID.text = dataText;
+      StartCoroutine(joinGame(gameName.text, gameID.text, username.text));
     }
 
 
-    IEnumerator joinGame()
+    IEnumerator joinGame(string name, string id, string username)
     {
       // Build url string with parameters
       string post_url = joinGameURL + "gamename=" + name + "&id="
-                      + gameID.text + "&username=TESTUSER";
+                      + id + "&username=" + username;
       Debug.Log(post_url);
       // Execute request
       UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
