@@ -13,21 +13,21 @@ public class JoinGame : MonoBehaviour
     public Button joinGameButton;
     public Text gameID;
     public Text gameName;
+    public Text username;
 
     // Start is called before the first frame update
     void Start()
     {
       joinGameButton.onClick.AddListener(() =>
-          StartCoroutine(joinGame(gameName.text, gameID.text)));
+          StartCoroutine(joinGame(gameName.text, gameID.text, username.text)));
     }
 
 
-    IEnumerator joinGame(string name, string id)
+    IEnumerator joinGame(string name, string id, string username)
     {
         // Build url string with parameters
         string post_url = joinGameURL + "gamename=" + name + "&id="
-                        + id + "&username=TESTUSER";
-        Debug.Log(post_url);
+                        + id + "&username=" + username;
         // Execute request
         UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
         yield return hs_post.SendWebRequest();

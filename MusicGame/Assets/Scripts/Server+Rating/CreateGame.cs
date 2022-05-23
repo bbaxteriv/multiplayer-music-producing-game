@@ -27,8 +27,7 @@ public class CreateGame : MonoBehaviour
     IEnumerator createGame(string name)
     {
       // Build url string with parameters
-      string post_url = createGameURL + "gamename=" + name + "&username=TESTUSER";
-      Debug.Log(post_url);
+      string post_url = createGameURL + "gamename=" + name;
       // Execute request
       UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
       yield return hs_post.SendWebRequest();
@@ -60,7 +59,6 @@ public class CreateGame : MonoBehaviour
       // Build url string with parameters
       string post_url = joinGameURL + "gamename=" + name + "&id="
                       + id + "&username=" + username;
-      Debug.Log(post_url);
       // Execute request
       UnityWebRequest hs_post = UnityWebRequest.Post(post_url, "");
       yield return hs_post.SendWebRequest();
