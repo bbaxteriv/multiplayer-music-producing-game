@@ -44,11 +44,11 @@ public class RecordButton : MonoBehaviour
         if (Globals.clickNumber % 2 == 1) // start recording
         {
             Renderer.Rendering = true;
-            RecButton.GetComponent<Image>().color = new Color(166f/255f, 0, 0);
+            RecButton.GetComponent<Image>().color = new Color(158f/255f, 82f/255f, 83f/255f);
         }
         else // end recording
         {
-            RecButton.GetComponent<Image>().color = new Color(1, 0, 0);
+            RecButton.GetComponent<Image>().color = new Color(238f/255f, 82f/255f, 83f/255f);
             EndRecording();
             SaveToTrack(); 
             SceneManager.LoadScene("Tracks");           
