@@ -11,4 +11,5 @@ static class Globals
     public static float timer = 130f;
     public static string gameID;
     public static string playerID;
+    public static string username;
 }

@@ -58,6 +58,7 @@ public class CreateGame : MonoBehaviour
     IEnumerator joinGame(string name, string gameID, string username)
     {
       Globals.gameID = gameID;
+      Globals.username = username;
       // Build url string with parameters
       string post_url = joinGameURL + "gamename=" + name + "&id="
                       + gameID + "&username=" + username;
