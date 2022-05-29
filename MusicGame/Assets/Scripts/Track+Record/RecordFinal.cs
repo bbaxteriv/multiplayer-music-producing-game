@@ -59,7 +59,7 @@ public class RecordFinal : MonoBehaviour
     {
        WWWForm form = new WWWForm();
        form.AddBinaryData("fileToUpload", File.ReadAllBytes("./Assets/Resources/Exports/export.wav"), "audio/wav");
-       form.AddField("username", Globals.username);
+       form.AddField("playerid", Globals.playerID);
        WWW www = new WWW(url, form);
        yield return www;
     }
