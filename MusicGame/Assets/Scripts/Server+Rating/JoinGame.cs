@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class JoinGame : MonoBehaviour
@@ -51,5 +52,6 @@ public class JoinGame : MonoBehaviour
       // Get id
       string dataText = hs_get.downloadHandler.text;
       Globals.playerID = dataText;
+      SceneManager.LoadScene("Menu");
     }
 }
