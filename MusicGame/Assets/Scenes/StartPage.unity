@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 2043247457}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -105}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.395, y: 0.23355892}
+  m_AnchorMax: {x: 0.595, y: 0.29788217}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334296490
 MonoBehaviour:
@@ -420,10 +420,10 @@ RectTransform:
   m_Father: {fileID: 2043247457}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 51}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.395, y: 0.58000004}
+  m_AnchorMax: {x: 0.595, y: 0.64654404}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546475903
 MonoBehaviour:
@@ -556,10 +556,10 @@ RectTransform:
   m_Father: {fileID: 2043247457}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.395, y: 0.4623384}
+  m_AnchorMax: {x: 0.595, y: 0.5311029}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721728851
 MonoBehaviour:
@@ -727,9 +727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Create Game
-
-'
+  m_Text: Create Game
 --- !u!222 &779584302
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -770,10 +768,10 @@ RectTransform:
   m_Father: {fileID: 2043247457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 120}
-  m_SizeDelta: {x: 531.3062, y: 97.8237}
+  m_AnchorMin: {x: 0.0625, y: 0.68844116}
+  m_AnchorMax: {x: 0.93750006, y: 0.84410286}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856010046
 MonoBehaviour:
@@ -808,7 +806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: (Title)
+  m_Text: Music Producing Game
 --- !u!222 &856010047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -997,10 +995,10 @@ RectTransform:
   m_Father: {fileID: 2043247457}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -53}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.395, y: 0.349}
+  m_AnchorMax: {x: 0.595, y: 0.4134411}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365888161
 MonoBehaviour:
