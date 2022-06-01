@@ -468,8 +468,8 @@ MonoBehaviour:
     4. Your recordings
     will show up in the tracks scene
 
-    5. When the timer runs out, start voting
-    on other players'' recordings if you are in the multiplayer mode'
+    5. When the timer runs out, listen to other
+    players'' recordings if you are in the multiplayer mode'
 --- !u!222 &1671591807
 CanvasRenderer:
   m_ObjectHideFlags: 0
