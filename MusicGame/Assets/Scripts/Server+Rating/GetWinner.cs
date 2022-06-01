@@ -24,6 +24,7 @@ public class GetWinner : MonoBehaviour
     {
       // Execute request
       string get_url = getWinnerURL + "g_id=" + Globals.gameID;
+
       UnityWebRequest hs_get = UnityWebRequest.Get(get_url);
       yield return hs_get.SendWebRequest();
       // Display error
