@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Voting.unity
     guid: a34afed251e50784eabd4ce88e61981b
+  - enabled: 1
+    path: Assets/Scenes/WinnerReveal.unity
+    guid: 2e86a0af6c5d246da8f65e9ca198d8c3
   m_configObjects: {}

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class GetWinner : MonoBehaviour
 {
-    private string getWinnerURL = "http://localhost/getwinner.php?";
+    private string getWinnerURL = "https://1920.lakeside-cs.org/MultiplayerMusicGame/MusicGame/getwinner.php?";
     public Button getWinnerButton;
     public Text gameID;
 
