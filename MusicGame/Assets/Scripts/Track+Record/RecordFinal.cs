@@ -10,7 +10,6 @@ public class RecordFinal : MonoBehaviour
 {
     private AudioRenderer Renderer;
     public Button RecButton;
-    public string username = "calvin";
     private int clickNumber = 0;
 
     // Start is called before the first frame update
@@ -60,7 +59,7 @@ public class RecordFinal : MonoBehaviour
     {
        WWWForm form = new WWWForm();
        form.AddBinaryData("fileToUpload", File.ReadAllBytes("./Assets/Resources/Exports/export.wav"), "audio/wav");
-       form.AddField("username", username);
+       form.AddField("playerid", Globals.playerID);
        WWW www = new WWW(url, form);
        yield return www;
     }

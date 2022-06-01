@@ -9,4 +9,7 @@ static class Globals
     public static List<TrackData> TrackList = new List<TrackData>();
     public static List<int> deletedTracks = new List<int>();
     public static float timer = 130f;
+    public static string gameID;
+    public static string playerID;
+    public static string username;
 }
