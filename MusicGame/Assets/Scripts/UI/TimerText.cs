@@ -21,27 +21,44 @@ public class TimerText : MonoBehaviour
     {
         display.text = DisplayTime(Globals.timer);
 
-        if (SceneManager.GetActiveScene().name == "Voting")
+        if (!Globals.sandboxMode)
         {
-            Destroy(gameObject);
-        }
+            if (SceneManager.GetActiveScene().name == "Voting")
+            {
+                Destroy(gameObject);
+            }
 
-        if (Globals.timer > 0)
-        {
-            Globals.timer -= Time.smoothDeltaTime;
-        }
-        else
-        {
-            SceneManager.LoadScene("Voting");
+            if (Globals.timer > 0)
+            {
+                Globals.timer -= Time.smoothDeltaTime;
+            }
+            else
+            {
+                SceneManager.LoadScene("Voting");
+            }
         }
     }
 
     public string DisplayTime(float timer)
     {
-        float minutes = Mathf.FloorToInt(timer / 60);
-        float seconds = Mathf.CeilToInt(timer % 60);
-        string timerText = string.Format("{0:00}:{1:00}", minutes, seconds - 1);
+        string timerText = "";
+
+        if (!Globals.sandboxMode)
+        {
+            float minutes = Mathf.FloorToInt(timer / 60);
+            float seconds = Mathf.CeilToInt(timer % 60);
+            timerText = string.Format("{0:00}:{1:00}", minutes, seconds - 1);
+        }
+        else
+        {
+            timerText = "∞";
+        }
 
         return timerText;
+    }
+
+    public void OneSecond()
+    {
+        Globals.timer = 2f;
     }
 }
