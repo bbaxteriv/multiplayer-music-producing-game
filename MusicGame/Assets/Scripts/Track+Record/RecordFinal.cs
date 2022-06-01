@@ -48,7 +48,7 @@ public class RecordFinal : MonoBehaviour
         Renderer.Save("./Assets/Resources/Exports/export.wav");
         AssetDatabase.Refresh();
         Renderer.Rendering = false;
-        SceneManager.LoadScene("Preview");
+        SceneManager.LoadScene("Voting");
 
         //connecting to website
         string url = "https://1920.lakeside-cs.org/MultiplayerMusicGame/MusicGame/insert.php?";
@@ -57,10 +57,10 @@ public class RecordFinal : MonoBehaviour
 
     IEnumerator fillForm(string url)
     {
-       WWWForm form = new WWWForm();
-       form.AddBinaryData("fileToUpload", File.ReadAllBytes("./Assets/Resources/Exports/export.wav"), "audio/wav");
-       form.AddField("playerid", Globals.playerID);
-       WWW www = new WWW(url, form);
-       yield return www;
+      WWWForm form = new WWWForm();
+      form.AddBinaryData("fileToUpload", File.ReadAllBytes("./Assets/Resources/Exports/export.wav"), "audio/wav");
+      form.AddField("playerid", Globals.playerID.ToString());
+      WWW www = new WWW(url, form);
+      yield return www;
     }
 }
