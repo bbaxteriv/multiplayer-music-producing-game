@@ -25,4 +25,14 @@ public class SceneSwitch : MonoBehaviour
 
     SceneManager.LoadScene(NewScene);
   }
+
+  public void SandboxModeOn()
+  {
+    Globals.sandboxMode = true;
+  }
+
+  public void SandboxModeOff()
+  {
+    Globals.sandboxMode = false;
+  }
 }
