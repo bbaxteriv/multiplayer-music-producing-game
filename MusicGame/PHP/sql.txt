@@ -1,0 +1,61 @@
+create game
+  INSERT INTO music_game_games (name) VALUES(?, ?);
+  SELECT LAST_INSERT_ID() FROM music_game_games;
+  add current user to game
+    INSERT INTO music_game_players (name, game_id) VALUES (?, ?)
+
+add player
+  results = SELECT id FROM music_game_games WHERE name = ? and id = ?;
+  names = SELECT name FROM music_game_players WHERE game_id = ?;
+  if name in names
+    name in use
+  if length results == 1
+    INSERT INTO music_game_players (name, game_id) VALUES(?, ?);
+  else
+    password or name is incorrect
+
+add wav
+  INSERT INTO music_game_recordings (wav, player_id, game_id) VALUES (?, ?, ?);
+
+add rating
+  INSERT INTO music_game_ratings (rating, player_id, game_id) VALUES (?, ?, ?);
+
+get winner
+  SELECT id FROM music_game_recordings WHERE game_id = ?;
+  highestRating = 0
+  bestRecordingId = null
+  for id in recording_ids
+    SELECT rating FROM music_game_ratings WHERE id = ?;
+    sum = 0
+    count = 0
+    for rating in ratings
+      sum += rating
+      count += 1
+    rating = sum / count
+    if rating > highestRating
+      highestRating = rating
+      bestRecordingId = id
+  SELECT name FROM music_game_players WHERE id =
+    (SELECT player_id FROM music_game_recordings WHERE id = bestRecordingId);
+
+
+music_game_recordings
+  int auto-increment id
+  int wav
+  int player_id
+  int game_id
+
+music_game_players
+  int auto-increment id
+  string name
+  int game_id
+
+music_game_games
+  int auto-increment id
+  string name
+
+music_game_ratings
+  int auto-increment id
+  int rating
+  int player_id
+  int recording_id
